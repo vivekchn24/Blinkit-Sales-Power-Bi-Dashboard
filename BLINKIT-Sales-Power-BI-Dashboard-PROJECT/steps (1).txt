@@ -1,0 +1,44 @@
+Data Cleaning & Standardization Process
+
+1)Open the Power Query Window
+-Now make some changes in the "Item Fat Content" Column
+--Change "LF" to "Low Fat"
+--Change "reg" to "Regular"
+--Also change the format to "Capitalize each word"
+Click on Close & apply
+
+2) Now in the power query window
+--Go to view menu
+-Select the "Column Quality" & "Column Distribution"
+Click on Close & apply
+
+3) Now select the format your page report option in the visualization settings
+--Go to the Canvas setting & apply the following
+--Type: Custom
+--Height: 800px
+--Width: 1400px
+--Vertical Alignment: Middle
+
+--Go to the Canvas Background setting & apply the following
+--Transperency:40%
+
+4) Will create a new measure as shown below
+--Total Sales = SUM('BlinkIT Grocery Data'[Sales])
+--Average Sales = AVERAGE('BlinkIT Grocery Data'[Sales])
+--No of Items = COUNTROWS('BlinkIT Grocery Data')
+--Average rating = AVERAGE('BlinkIT Grocery Data'[Rating])
+
+
+5) We need to create additional matrix for the kpis
+-Go to "Modelling" Menu, click on the "new parameter" & select "fields" from the list
+--Now fill the follwoing values in the table as shown below
+a) What will your variable adjust?:Fields
+b) Name:Metrics
+c) Add and reorder fields: Total Sales, Average sales, No of Items, Average ratings
+--Click on create & you will see a new table with that data had appeared over there
+--create a slicer for the same & change the slicer style to tile 
+
+6) Creating a Donught chart
+--Take a donught chart from the visuals
+--Select "Item fat Content" from the "BlinkIT" table & "Metrics" in values from the "metrics" table
+-- As you click on the slicer you can see that the donguht chart is changing
